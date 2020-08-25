@@ -4,7 +4,7 @@ use App;
 use Log,PDF;
 use PHPExcel; 
 use PHPExcel_IOFactory;
-
+use Auth;
 
 class IndexController extends Controller
 {
@@ -15,10 +15,13 @@ class IndexController extends Controller
 	}
 	
 	public function index()
-    { 
-		// Log::channel('custom')->info('Something happened!');
-        return view('welcome');
-		// echo 'ok';
+    {
+  
+        if(Auth::user()){
+            echo 'login';
+        }else{
+            return view('auth.login');
+        }
     }
 	
 	public function pdf()

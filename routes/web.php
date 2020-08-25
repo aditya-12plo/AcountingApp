@@ -32,7 +32,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::name('locale.switch')->get('switch/{locale}', 'LocaleController@switch');
 Route::middleware(['localized'])->group(function () {
 
-    Route::get('/', 'IndexController@index')->name('login');
+    Route::get('/', 'IndexController@index')->name('loginFirst');
 
     /**
      * user login

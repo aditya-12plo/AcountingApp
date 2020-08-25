@@ -6,16 +6,15 @@
         @csrf
         <div class="panel periodic-login">
             <div class="panel-body text-center">
-                <p class="element-name">Tukang Ngitung</p>
+                <p class="element-name">AccountingPintar</p>
                 <p class="atomic-mass">v1</p>
                 <i class="icons icon-arrow-down"></i>
 
                 <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                    <input type="text" readonly onfocus="$(this).removeAttr('readonly');" autocomplete="off" name="company_id" autocomplete="q44124234324" id="company_id" class="form-text" required>
+                    <input type="text" readonly onfocus="$(this).removeAttr('readonly');" autocomplete="off" name="company_id" id="company_id" class="form-text" required>
                     <span class="bar"></span>
                     <label for="company_id">Company Id</label>
-                    
-                    @error('email')
+                    @error('company_id')
                     <div class="alert alert-danger alert-3d alert-dismissible fade in" role="alert">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
                         <strong>{{ $message }}</strong>
@@ -25,7 +24,7 @@
                 </div>
 
                 <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                    <input type="email" readonly onfocus="$(this).removeAttr('readonly');" autocomplete="off" name="email" autocomplete="q44124234324" id="email" class="form-text" required>
+                    <input type="email" readonly onfocus="$(this).removeAttr('readonly');" autocomplete="off" name="email" id="email" class="form-text" required>
                     <span class="bar"></span>
                     <label for="email">Email</label>
                     

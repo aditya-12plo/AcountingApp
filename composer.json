@@ -1,5 +1,5 @@
 {
-    "name": "Akunting Pintar",
+    "name": "AccountingPintar",
     "type": "project",
     "description": "Accounting Aplication from API (Aplikasi Pintar Indonesia).",
     "keywords": [
@@ -18,7 +18,8 @@
         "laravel/tinker": "^2.0",
         "laravel/ui": "^2.1",
         "phpoffice/phpexcel": "^1.8",
-        "phpoffice/phpspreadsheet": "^1.11"
+        "phpoffice/phpspreadsheet": "^1.11",
+        "realrashid/sweet-alert": "^3.1"
     },
     "require-dev": {
         "facade/ignition": "^2.0",

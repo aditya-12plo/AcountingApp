@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Akunting Pintar'),
+    'name' => env('APP_NAME', 'AccountingPintar'),
 
     /*
     |--------------------------------------------------------------------------
@@ -52,9 +52,9 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'http://localhost:8000'),
 
-    'asset_url' => env('ASSET_URL', null),
+    'asset_url' => env('ASSET_URL', 'http://localhost:8000'),
 
     /*
     |--------------------------------------------------------------------------
@@ -81,7 +81,12 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'id',
+	'locales' => [
+		'en' => 'English',
+		'id' => 'Indonesia',
+		// Add as many languages you want
+	],
 
     /*
     |--------------------------------------------------------------------------
@@ -94,7 +99,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'id',
 
     /*
     |--------------------------------------------------------------------------
@@ -177,6 +182,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         Logger\Laravel\Providers\MonologMysqlHandlerServiceProvider::class,
 		Barryvdh\DomPDF\ServiceProvider::class,
+        RealRashid\SweetAlert\SweetAlertServiceProvider::class,
 
     ],
 
@@ -230,6 +236,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 		'PDF' => Barryvdh\DomPDF\Facade::class,
+        'Alert' => RealRashid\SweetAlert\Facades\Alert::class,
 
     ],
 

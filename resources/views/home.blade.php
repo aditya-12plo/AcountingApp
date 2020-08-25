@@ -14,7 +14,15 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    {{ __('You are logged in!') }} {{ Auth::user()->name }}
+                </div>
+                <div class="card-body"> 
+                    <ul>
+                        <li><a onclick="event.preventDefault();document.getElementById('logout-form').submit();"><span class="fa fa-power-off "></span></a></li>
+						<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                      </ul>
                 </div>
             </div>
         </div>

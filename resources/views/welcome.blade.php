@@ -7,13 +7,17 @@
         <title>Laravel</title>
  
         <link rel="stylesheet" href="/css/app.css">
-        <script src="/js/app.js" async defer></script>
+        
     </head>
     <body>
      
         <div id="AccountingApp">
             <router-view></router-view>
         </div>
+
+
+
+        <script src="/js/app.js" async defer></script>
 
 
     </body>
