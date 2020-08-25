@@ -24,12 +24,19 @@ Route::get('/home', 'HomeController@index')->name('home');
 */
 
 
-Route::get('/', 'IndexController@index')->name('home');
 // Route::get('/{any}', function(){
 //     return view('welcome');
 // })->where('any','.*');
 
 
-Auth::routes();
+Route::name('locale.switch')->get('switch/{locale}', 'LocaleController@switch');
+Route::middleware(['localized'])->group(function () {
 
-Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/', 'IndexController@index')->name('login');
+
+    /**
+     * user login
+     */
+    Auth::routes();
+    Route::get('/home', 'HomeController@index')->name('home');
+});
